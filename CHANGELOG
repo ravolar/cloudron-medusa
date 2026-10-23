@@ -1,0 +1,2 @@
+[0.1.0]
+* Первая версия пакета: Medusa 2.22.0, коробки plugins/* (ADR 0012), этап cloudron общего Dockerfile (MD-50), шлюз shop-gate внутри приложения, SHOP_REQUIRED (MD-48)
