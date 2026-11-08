@@ -756,6 +756,48 @@
             "creationDate": "Thu, 05 Nov 2026 09:34:08 GMT",
             "ts": "Thu, 05 Nov 2026 09:34:08 GMT",
             "publishState": "published"
+        },
+        "0.1.18": {
+            "manifest": {
+                "manifestVersion": 2,
+                "id": "ee.mugavauto.medusa",
+                "title": "Medusa (Mugav Auto)",
+                "tagline": "Бэкенд магазинов Ravolar на Medusa v2",
+                "description": "Бэкенд интернет-магазинов Ravolar / Mugav Auto на [Medusa](https://medusajs.com) v2: товары, цены, склады, доставка\n(Omniva, самовывоз), оплата Stripe, заказы и письма. Админка — `/app`, Store API — `/store`, Admin API — `/admin`.\n\nСборка из закрытого репозитория проекта; образ — в закрытом реестре. Пакет не предназначен для установки посторонними.\n",
+                "changelog": "* Medusa 2.22.2 → 2.22.4 (MD-58): провайдер Stripe на библиотеке stripe 23.1.0 (версия API Stripe та же — 2024-04-10); исправления админки (фильтры и страница списков сохраняются при возврате); RBAC не включён; новых миграций базы нет\n* Безопасность зависимостей ядра: graphql 17 и @graphql-tools (prototype pollution), path-to-regexp 9, scrypt-kdf 4\n* Письма: коробка notifications 1.7.2 — resend 6.37.0 (запасной путь), основной путь не менялся\n",
+                "postInstallMessage": "Настройки магазина — `/app/data/env.sh` (File Manager), секреты `JWT_SECRET` и `COOKIE_SECRET` — `/app/data/.secrets/secrets.env`\n(Web Terminal). Без ключей обязательных функций (Stripe live, Omniva, письма SMTP, R2) Medusa не стартует и пишет в журнал,\nкаких переменных нет. Порядок — README пакета `app/deploy/cloudron/` в репозитории проекта.\n",
+                "version": "0.1.18",
+                "upstreamVersion": "2.22.4",
+                "website": "https://medusajs.com",
+                "documentationUrl": "https://docs.medusajs.com",
+                "packagerName": "ravolar",
+                "packagerUrl": "https://github.com/ravolar/cloudron-medusa",
+                "packageUrl": "https://github.com/ravolar/cloudron-medusa",
+                "iconUrl": "https://raw.githubusercontent.com/ravolar/cloudron-medusa/main/logo.png",
+                "icon": "file://logo.png",
+                "mediaLinks": [
+                    "https://raw.githubusercontent.com/ravolar/cloudron-medusa/main/logo.png"
+                ],
+                "tags": [
+                    "ecommerce",
+                    "shop",
+                    "medusa"
+                ],
+                "httpPort": 8000,
+                "healthCheckPath": "/health",
+                "configurePath": "/app",
+                "memoryLimit": 2684354560,
+                "addons": {
+                    "localstorage": {},
+                    "postgresql": {},
+                    "redis": {}
+                },
+                "minBoxVersion": "10.0.0",
+                "dockerImage": "ghcr.io/ravolar/mugavauto-medusa@sha256:b527fadcaf6a311695174fad2358170b74bbfbbd697d69fef7ca8066293a2d4d"
+            },
+            "creationDate": "Sun, 08 Nov 2026 10:19:53 GMT",
+            "ts": "Sun, 08 Nov 2026 10:19:53 GMT",
+            "publishState": "published"
         }
     }
 }
